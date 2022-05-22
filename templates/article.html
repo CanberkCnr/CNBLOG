@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% if article %}
+<h4>{{article[1]}}</h4>
+<hr>
+Yazar : {{article[2]}}
+<hr>
+Tarih : {{article[4]}}
+<hr>
+{{article[3]|safe}}
+{% else %}
+<div class = "alert alert-warning">Böyle bir Metin bulunmuyor</div>
+{% endif %}
+
+{% endblock  %}
